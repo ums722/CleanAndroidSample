@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+//    id 'androidx.navigation.safeargs.kotlin'
+//    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -60,4 +63,32 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+
+
+
+
+    // Retrofit2
+    implementation(Retrofit.RETROFIT)
+    implementation(Retrofit.GSON)
+    implementation(Retrofit.OKHTTP)
+    implementation(Retrofit.LOGGING)
+
+    // nvigation component
+    implementation(Navigation.FRAGMENT)
+    implementation(Navigation.UI)
+    implementation(AndroidX.FRAGMENT)
+
+    //viewmodel
+    implementation(Lifecycle.VIEW_MODEL)
+    implementation(Lifecycle.EXTENTIONS)
+
+    // Coroutines
+    implementation(Coroutine.COROUTINE)
+
+    // datastore
+    implementation(DataStore.DATASTORE)
+
+    // liveData
+    implementation(Lifecycle.LIVEDATA)
+
 }
