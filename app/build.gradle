@@ -66,6 +66,7 @@ dependencies {
 
 
 
+    implementation project(":domain")
 
     // Retrofit2
     implementation(Retrofit.RETROFIT)
