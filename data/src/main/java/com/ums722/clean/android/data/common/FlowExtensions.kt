@@ -10,7 +10,7 @@ import java.net.UnknownHostException
 import com.ums722.clean.android.domain.entity.Entity
 import com.ums722.clean.android.domain.common.Result
 
-
+//todo 나중에 에러바디 엔티티 추가해서 예외처리해줘야함
 fun <T> Flow<T>.apiCatch(producerScope: ProducerScope<Result<Entity>>): Flow<T> {
     return this.catch { cause: Throwable ->
         when (cause) {

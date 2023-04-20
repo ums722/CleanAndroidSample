@@ -83,12 +83,19 @@ dependencies {
     implementation(Lifecycle.VIEW_MODEL)
     implementation(Lifecycle.EXTENTIONS)
 
+    // hilt
+    implementation(Hilt.HILT)
+    kapt(Hilt.COMPILER)
+
     // Coroutines
     implementation(Coroutine.COROUTINE)
 
     // datastore
     implementation(DataStore.DATASTORE)
 
+    // log
+    implementation(Log.LOG)
+    
     // liveData
     implementation(Lifecycle.LIVEDATA)
 
