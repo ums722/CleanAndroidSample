@@ -7,5 +7,5 @@ import com.ums722.clean.android.domain.common.Result
 
 internal interface AuthRemoteDataSource {
 
-    suspend fun login(id: String, password: String): Flow<Result<LoginRes>>
+    fun login(id: String, password: String): Flow<Result<LoginRes>>
 }

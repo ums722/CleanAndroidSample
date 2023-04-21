@@ -4,6 +4,9 @@ plugins {
     id 'kotlin-kapt'
 }
 
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 android {
     namespace 'com.ums722.clean.android.data'
     compileSdk 33
@@ -20,6 +23,13 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "version"
+    productFlavors {
+        dev {
+            buildConfigField("String", "DEV_API", properties['DEV_API'])
         }
     }
     compileOptions {

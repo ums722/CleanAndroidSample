@@ -1,5 +1,6 @@
 package com.ums722.clean.android.data.module
 
+import com.ums722.clean.android.data.BuildConfig
 import com.ums722.clean.android.data.api.AuthApi
 import com.ums722.clean.android.data.remote.AuthRemoteDataSource
 import com.ums722.clean.android.data.remote.AuthRemoteDataSourceImpl
@@ -35,7 +36,7 @@ internal object RemoteDataModule {
     @Singleton
     fun provideAuthRetrofit(loggingInterceptor: HttpLoggingInterceptor): AuthApi =
         Retrofit.Builder()
-            .baseUrl("나중에 주소를 집어 넣어야 함")
+            .baseUrl(BuildConfig.DEV_API)
             .client(OkHttpClient.Builder().also { client ->
                 client.addInterceptor(loggingInterceptor)
                 client.connectTimeout(10, TimeUnit.SECONDS)

@@ -1,4 +1,4 @@
-package com.ums722.clean.android.domain.hiltmodule
+package com.ums722.clean.android.domain.module
 
 import com.ums722.clean.android.domain.repository.AuthRepository
 import com.ums722.clean.android.domain.usecase.LoginUseCase
@@ -11,9 +11,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 internal object DomainModule {
-
     @Provides
     @Singleton
     fun provideLoginUseCase(authRepository: AuthRepository) = LoginUseCase(authRepository)
-
 }
